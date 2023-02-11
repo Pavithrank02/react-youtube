@@ -4,7 +4,7 @@ import Button from './Button'
 const ButtonList = () => {
   const list= ["All", "Gaming", "Songs", " Movies", "Cricket", "Sports", "agent", "Rolex", "Cards", " Movies", "Cricket", "Sports", "agent", "Rolex"," Movies", "Cricket", ];
   return (
-    <div className='flex'>
+    <div className='flex ml-4'>
       {list.map((item) => (
       <Button name={item}/> 
       ))}

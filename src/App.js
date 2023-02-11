@@ -6,7 +6,7 @@ import './App.css';
 
 function App() {
   return (
-    <div className="font-bold">
+    <div className="">
       <Provider store={store}>
       <Header />
       <MainBody />
