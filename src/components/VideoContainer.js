@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { GET_API_KEY } from '../utils/Constants';
-import VideoCard from './VideoCard'
+import VideoCard, { AdVideoCard } from './VideoCard'
 
 const VideoContainer = () => {
-  const [videos, setVideos] = useState()
+  const [videos, setVideos] = useState([])
 
   useEffect(() => {
     getApiData();
@@ -16,9 +16,10 @@ const VideoContainer = () => {
   }
   return (
     <div className="flex flex-wrap ml-4">
+      {videos[0] && <AdVideoCard info={videos[0]} />}
       {videos?.map((video) => (
-        <Link to={"/watch?v=" + video.id}>
-          <VideoCard key={video.id} info={video} />
+        <Link key={video.id} to={"/watch?v=" + video.id}>
+          <VideoCard info={video} />
         </Link>
       ))}
     </div>

@@ -5,8 +5,8 @@ const ButtonList = () => {
   const list= ["All", "Gaming", "Songs", " Movies", "Cricket", "Sports", "agent", "Rolex", "Cards", " Movies", "Cricket", "Sports", "agent", "Rolex"," Movies", "Cricket", ];
   return (
     <div className='flex ml-4'>
-      {list.map((item) => (
-      <Button name={item}/> 
+      {list.map((item, index) => (
+      <Button key={index} name={item}/> 
       ))}
     </div>
   )
