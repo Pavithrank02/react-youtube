@@ -3,22 +3,30 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import {BsSearch} from 'react-icons/bs'
 import { YOUTUBE_SEARCH_KEY } from '../utils/Constants';
+import { cacheResult } from '../utils/searchSlice';
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState("")
   const [suggestions, setSuggestions] = useState([])
   const [showSuggestion, setShowSuggestions] =useState(false)
   
-  const cacheSearch = useSelector((store) => store.state)
+  const cacheSearch = useSelector((store) => store.search)
+  const dispatch = useDispatch();
+
   useEffect(() => {
     
-    const timer = setTimeout(() => getYoutubesearchData(), 200);
-
+    const timer = setTimeout(() => {
+      if(cacheSearch[searchQuery]){
+        setSuggestions(cacheSearch[searchQuery])
+      }else{
+        getYoutubesearchData();
+      }
+    }, 200);
+  
     return (()=>{
       clearTimeout(timer);
     })
   }, [searchQuery])
-  const dispatch = useDispatch();
   const toggleMenuHandler = () => {
     dispatch(toggleMenu())
   }
@@ -27,6 +35,10 @@ const Header = () => {
     const data = await fetch(YOUTUBE_SEARCH_KEY + searchQuery);
     const json = await data.json()
     setSuggestions(json[1])
+    
+    dispatch(cacheResult({
+      [searchQuery]: json[1],
+    }))
   }
   return (
     <div className='flex justify-between border shadow-lg'>
