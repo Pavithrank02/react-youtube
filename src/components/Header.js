@@ -54,9 +54,9 @@ const Header = () => {
         </a>
       </div>
       <div>
-        <div className='flex p-2 m-1 col-span-10'>
+        <div className='flex p-2 m-1 col-span-10 mr-3'>
           <input
-            className='px-7 border-blue-700 border-2 rounded-l-full w-[37rem]'
+            className=' border-blue-700 border-2 rounded-l-full w-[37rem]'
             type="type"
             onChange={(event) => setSearchQuery(event.target.value)}
             onFocus={() => setShowSuggestions(true)}
