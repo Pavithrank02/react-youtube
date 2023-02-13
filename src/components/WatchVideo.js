@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useSearchParams } from 'react-router-dom'
 import { closeMenu } from '../utils/appSlice'
+import CommentsContainer from './CommentsContainer'
 
 const WatchVideo = () => {
   const [searchParams] = useSearchParams();
@@ -20,7 +21,9 @@ const WatchVideo = () => {
       frameBorder="0" 
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
       allowFullScreen></iframe>
-      
+      <div className=''>
+       <CommentsContainer />
+      </div>
     </div>
   )
 }
