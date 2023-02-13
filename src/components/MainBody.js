@@ -6,9 +6,9 @@ import Sidebar from './Sidebar'
 const MainBody = () => {
   return (
     <div className='flex'>
-        <Sidebar />
-        <Outlet />
-      </div>
+      <Sidebar />
+      <Outlet />
+    </div>
   )
 }
 

@@ -6,7 +6,7 @@ const useVideo = () => {
   useEffect(() => {
     getApiData();
   }, []);
-  
+
   async function getApiData() {
     console.log(videos)
     const data = await fetch(GET_API_KEY);

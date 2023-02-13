@@ -8,20 +8,20 @@ const Comments = ({ data }) => {
         <img src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" alt="sign" />
       </div>
       <div>
-      <p className='font-bold'>{name}</p>
-      <p>{comment}</p>
+        <p className='font-bold'>{name}</p>
+        <p>{comment}</p>
       </div>
     </div>
   )
 }
-export const CommentLists = ({comments}) => {
+export const CommentLists = ({ comments }) => {
   return comments.map((c, index) => (
     <div>
-      <Comments key={index} data={c}/>
+      <Comments key={index} data={c} />
       <div className=' pl-5 border border-l-black ml-5'>
-      <CommentLists comments= {c.replies}/>
+        <CommentLists comments={c.replies} />
       </div>
-      </div>
+    </div>
   )
 
   )

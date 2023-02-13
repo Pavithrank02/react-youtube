@@ -14,11 +14,11 @@ function App() {
     element: <MainBody />,
     children: [
       {
-        path:"/",
+        path: "/",
         element: <MainContainer />
       },
       {
-        path:"/watch",
+        path: "/watch",
         element: <WatchVideo />
       }
     ]
@@ -26,8 +26,8 @@ function App() {
   return (
     <div className="">
       <Provider store={store}>
-      <Header />
-      <RouterProvider router={appRouter} />
+        <Header />
+        <RouterProvider router={appRouter} />
       </Provider>
     </div>
   );
