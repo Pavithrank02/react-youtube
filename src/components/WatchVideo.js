@@ -12,9 +12,9 @@ const WatchVideo = () => {
     dispatch(closeMenu())
   }, [])
   return (
-    <div className='px-7'>
+    <div className='px-20 my-7'>
       <iframe 
-      width="1200" 
+      width="1050" 
       height="500" 
       src={"https://www.youtube.com/embed/" + searchParams.get("v")} 
       title="YouTube video player" 

@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
-import { GET_API_KEY } from '../utils/Constants';
+import useVideo from '../utils/useVideo';
 import VideoCard, { AdVideoCard } from './VideoCard'
 
 const VideoContainer = () => {
-  const [videos, setVideos] = useState([])
 
-  useEffect(() => {
-    getApiData();
-  }, []);
-  const getApiData = async () => {
-    const data = await fetch(GET_API_KEY);
-    const json = await data.json()
-    setVideos(json.items)
-  }
+  const videos = useVideo()
+  
   return (
     <div className="flex flex-wrap ml-4">
       {videos[0] && <AdVideoCard info={videos[0]} />}
