@@ -8,8 +8,8 @@ const Sidebar = () => {
 
   return (
     <div className='p-7 shadow-lg w-56 '>
-      <ul>
-        <li><Link to="/">Home</Link></li>
+      <ul >
+        <li className='hover:bg-slate-200 w-[7rem]'><Link to="/">Home</Link></li>
         <li>Shorts</li>
         <li>Subscription</li>
       </ul>
