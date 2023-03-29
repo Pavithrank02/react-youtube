@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom'
 import { closeMenu } from '../utils/appSlice'
 import useVideo from '../utils/useVideo';
 import CommentsContainer from './CommentsContainer'
+import LiveChat from './LiveChat';
 
 const WatchVideo = () => {
   const [searchParams] = useSearchParams();
@@ -68,7 +69,7 @@ const WatchVideo = () => {
         {videos.map((video) => {
           if (video.id === searchParams.get("v")) return <VideoDescriptionCard info={video} />
         })}
-
+      
       </div>
       <div className=''>
         <CommentsContainer />
