@@ -69,8 +69,10 @@ const WatchVideo = () => {
         {videos.map((video) => {
           if (video.id === searchParams.get("v")) return <VideoDescriptionCard info={video} />
         })}
-      
       </div>
+      <div className="w-96 top-20 right-5 le absolute">
+          <LiveChat />
+        </div>
       <div className=''>
         <CommentsContainer />
       </div>

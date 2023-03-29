@@ -3,4 +3,4 @@ export const GET_API_KEY = "https://youtube.googleapis.com/youtube/v3/videos?par
 
 export const YOUTUBE_SEARCH_KEY = "http://suggestqueries.google.com/complete/search?client=chrome&ds=yt&q="
 
-
+export const LIVE_CHAT_COUNT = 25;
