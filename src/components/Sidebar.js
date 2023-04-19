@@ -9,7 +9,7 @@ const Sidebar = () => {
   return (
     <div className='p-7 shadow-lg w-56 '>
       <ul >
-        <li className='hover:bg-slate-200 w-[7rem]'><Link to="/">Home</Link></li>
+        <li className='hover:bg-slate-200 w-[7rem] '><Link to="/">Home</Link></li>
         <li>Shorts</li>
         <li>Subscription</li>
       </ul>
@@ -29,7 +29,7 @@ const Sidebar = () => {
         <li> Music</li>
         <li> Sports</li>
         <li> Gaming</li>
-        <li> Movies</li>
+        <li> Series</li>
       </ul>
     </div>
   )

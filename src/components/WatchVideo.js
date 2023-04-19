@@ -12,7 +12,7 @@ const WatchVideo = () => {
   const [show, setShow] = useState(false);
 
   const videos = useVideo()
-  console.log(videos)
+  console.log("v",videos)
 
   const dispatch = useDispatch()
   useEffect(() => {
