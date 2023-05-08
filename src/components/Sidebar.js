@@ -28,7 +28,7 @@ const Sidebar = () => {
         <li> Movies</li>
         <li> Music</li>
         <li> Sports</li>
-        <li> Gaming</li>
+        <li> Sppof</li>
         <li> Series</li>
       </ul>
     </div>
